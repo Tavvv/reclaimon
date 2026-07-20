@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ReclaimOn — Privacy Policy</title>
+<style>
+  :root {
+    --bg: #F3EDE4;
+    --card: #FBF8F3;
+    --ink: #1E1B16;
+    --muted: #6B6155;
+    --accent: #C4501F;
+    --line: rgba(30, 27, 22, 0.12);
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 2.5rem 1.25rem 5rem;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  main { max-width: 46rem; margin: 0 auto; }
+  h1 { font-size: 2.25rem; line-height: 1.15; margin: 0 0 .4rem; letter-spacing: -0.02em; }
+  h2 { font-size: 1.25rem; margin: 2.5rem 0 .6rem; letter-spacing: -0.01em; }
+  .updated { color: var(--muted); font-size: .9rem; margin: 0 0 2rem; }
+  .lede {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 1.1rem 1.25rem;
+    font-size: 1.05rem;
+    margin: 0 0 1rem;
+  }
+  .lede strong { color: var(--accent); }
+  ul { padding-left: 1.15rem; }
+  li { margin: .35rem 0; }
+  p, li { color: #2E2921; }
+  .muted { color: var(--muted); }
+  a { color: var(--accent); }
+  table { width: 100%; border-collapse: collapse; margin: .75rem 0 0; font-size: .95rem; }
+  th, td { text-align: left; padding: .6rem .5rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { font-weight: 600; }
+  footer { margin-top: 3rem; padding-top: 1.25rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .9rem; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #17150F; --card: #201D16; --ink: #F2ECE2; --muted: #A79C8C; --line: rgba(242,236,226,0.14); }
+    p, li { color: #E8E1D5; }
+  }
+</style>
+</head>
+<body>
+<main>
+
+  <h1>ReclaimOn Privacy Policy</h1>
+  <p class="updated">Last updated: 20 July 2026</p>
+
+  <p class="lede">
+    The short version: <strong>ReclaimOn keeps your data on your device.</strong> There is no
+    ReclaimOn account, no ReclaimOn server, and no analytics or advertising SDKs. We cannot
+    see your goals, your sessions, your location, your health data, or which apps you block.
+  </p>
+
+  <p>
+    This policy explains what ReclaimOn stores, where it lives, and the few cases where data
+    leaves your device — always through Apple's own services, and always because you asked
+    for a feature that requires it.
+  </p>
+
+  <h2>What ReclaimOn stores</h2>
+  <p>
+    Everything below is written to a private database on your device (Apple's SwiftData, in an
+    app group container shared only with ReclaimOn's own widgets and extensions):
+  </p>
+  <ul>
+    <li>Your display name and profile photo, if you set one.</li>
+    <li>Goals you create, their weekly targets, and their categories.</li>
+    <li>Habit anchors: name, time window, days, and the place you pin on the map (as coordinates and a place name).</li>
+    <li>Sessions: start time, duration, how it went, and any note you add.</li>
+    <li>Records of when a blocked app was opened during an anchor window, used to show you your own patterns.</li>
+  </ul>
+
+  <h2>Permissions, and what each one is for</h2>
+  <table>
+    <tr><th>Permission</th><th>Why ReclaimOn asks</th><th>Where it goes</th></tr>
+    <tr>
+      <td>Screen&nbsp;Time<br><span class="muted">(Family Controls)</span></td>
+      <td>To block the apps you choose while an anchor is active.</td>
+      <td>Apple gives ReclaimOn opaque tokens, not app names. We cannot tell which apps you picked or see your usage. Tokens stay on your device.</td>
+    </tr>
+    <tr>
+      <td>Location</td>
+      <td>To notice when you arrive at or leave a place you anchored, so time is only credited where you said it happens.</td>
+      <td>Stored on your device. Never transmitted. Used for on-device geofencing only.</td>
+    </tr>
+    <tr>
+      <td>Apple&nbsp;Health</td>
+      <td>To count workouts or mindful minutes toward a matching goal, so you don't log them twice.</td>
+      <td><strong>Read-only.</strong> ReclaimOn never writes to Health and never sends health data anywhere. It stays on your device.</td>
+    </tr>
+    <tr>
+      <td>Notifications</td>
+      <td>Anchor reminders, session check-outs, and your weekly summary.</td>
+      <td>Scheduled locally on your device.</td>
+    </tr>
+  </table>
+  <p class="muted">
+    Every one of these is optional. Decline any of them and the rest of ReclaimOn still works;
+    the feature that needed it simply stays off.
+  </p>
+
+  <h2>Focus Pacts — the one feature that leaves your device</h2>
+  <p>
+    If you choose to start a Focus Pact with someone, that pact and its check-ins sync through
+    <strong>your own iCloud account</strong> using Apple's CloudKit sharing, so you and the person
+    you invited can both see it. This is the only ReclaimOn data that leaves your device.
+  </p>
+  <ul>
+    <li>Only the pact itself is shared: its name, type, check-ins, and streak. Your other goals, anchors, sessions, location and health data are never included.</li>
+    <li>It is shared only with the specific person you invite, and you can stop sharing at any time.</li>
+    <li>It travels through Apple's iCloud infrastructure under
+      <a href="https://www.apple.com/legal/privacy/">Apple's privacy policy</a>. There is no ReclaimOn
+      server involved, and we have no ability to read it.</li>
+  </ul>
+  <p>If you never create a pact, no ReclaimOn data ever leaves your device.</p>
+
+  <h2>Subscriptions</h2>
+  <p>
+    ReclaimOn offers a 21-day free trial and an optional paid subscription. Purchases are handled
+    entirely by Apple. We never see or receive your payment details. The date your trial began is
+    stored in your device's Keychain so the trial isn't restarted by reinstalling the app.
+  </p>
+
+  <h2>What we do not do</h2>
+  <ul>
+    <li>No analytics, telemetry, crash-reporting, or advertising SDKs. There are none in the app.</li>
+    <li>No tracking, no advertising identifiers, no profiling, no data sold or shared with data brokers.</li>
+    <li>No ReclaimOn accounts, passwords, or cloud profiles.</li>
+    <li>No sale or sharing of personal information as defined by the CCPA/CPRA. We have nothing to sell.</li>
+  </ul>
+
+  <h2>Your control</h2>
+  <ul>
+    <li><strong>See it:</strong> everything ReclaimOn knows is visible in the app.</li>
+    <li><strong>Change it:</strong> edit or delete any goal, anchor, or session at any time.</li>
+    <li><strong>Erase it:</strong> Settings includes "Delete All Data", which clears the on-device database. Deleting the app also removes it.</li>
+    <li><strong>Revoke it:</strong> withdraw Screen Time, Location, Health, or Notification access at any time in iOS Settings.</li>
+    <li><strong>Take it:</strong> because data is local, it is included in your normal encrypted device or iCloud backup.</li>
+  </ul>
+  <p class="muted">
+    Under GDPR and similar laws you have rights of access, correction, erasure, and portability.
+    Because ReclaimOn holds no copy of your data, you exercise all of these directly in the app —
+    there is nothing for us to retrieve or delete on your behalf.
+  </p>
+
+  <h2>Children</h2>
+  <p>
+    ReclaimOn is not directed at children under 13 and does not knowingly collect data from them.
+    Because the app stores nothing off-device, no such data reaches us.
+  </p>
+
+  <h2>Changes</h2>
+  <p>
+    If this policy changes, the date at the top will change with it, and material changes will be
+    noted in the app.
+  </p>
+
+  <h2>Contact</h2>
+  <p>
+    Questions about this policy or your data:
+    <a href="mailto:tavis.roberts@gmail.com">tavis.roberts@gmail.com</a>
+  </p>
+
+  <footer>
+    ReclaimOn is developed by Ohh Wow Labs.
+  </footer>
+
+</main>
+</body>
+</html>
