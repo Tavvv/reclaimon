@@ -1,149 +1,444 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ReclaimOn — App Blocker That Gives You Your Time Back | iPhone &amp; iPad</title>
-    <meta
-      name="description"
-      content="ReclaimOn anchors your goals to a real time and place, blocks distracting apps, and counts every minute you reclaim. Free for 21 days — no card, no account."
-    />
-    <meta
-      name="keywords"
-      content="focus, screen time, app blocker, digital detox, distraction, phone addiction, goals, deep work, streak"
-    />
-    <link rel="canonical" href="https://www.reclaimon.com/" />
-    <meta name="theme-color" content="#F1EBDF" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#D9542B">
+<link rel="icon" type="image/png" href="favicon.png">
+<meta property="og:image" content="https://www.reclaimon.com/og-image.jpg">
+<meta name="twitter:image" content="https://www.reclaimon.com/og-image.jpg">
+<title>ReclaimOn — Screen Time App That Builds Real Habits | iPhone &amp; iPad</title>
+<meta name="description" content="ReclaimOn is a screen time app and app blocker that anchors your goals to a real time and place, blocks distracting apps, and counts every minute you reclaim. Free for 21 days — no card, no account, data stays on your iPhone.">
+<meta name="keywords" content="screen time app, app blocker, focus app, digital detox, phone addiction, deep work, ADHD focus, habit tracker, distraction blocker">
+<link rel="canonical" href="https://www.reclaimon.com/">
+<meta property="og:title" content="ReclaimOn — Screen Time App That Builds Real Habits">
+<meta property="og:description" content="Anchor a goal to a real time and place, block what pulls you away, and watch the minutes go where you meant them to. Free for 21 days.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.reclaimon.com/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"MobileApplication","name":"ReclaimOn","operatingSystem":"iOS 17.0 or later","applicationCategory":"LifestyleApplication","description":"A screen time app that anchors goals to a real time and place, blocks distracting apps, and counts every minute you reclaim.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.reclaimon.com/"}
+</script>
+<style>
+  * { box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body { margin:0; background:#FCFAF4; font-family:"Hanken Grotesk",system-ui,sans-serif; color:#1B1712; -webkit-font-smoothing:antialiased; }
+  a { color:#D9542B; text-decoration:none; }
+  a:hover { color:#B23F1C; }
+  ::selection { background:#D9542B; color:#FCFAF4; }
+  @keyframes floaty { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-9px)} }
+  details > summary { list-style:none; cursor:pointer; }
+  details > summary::-webkit-details-marker { display:none; }
+</style>
+</head>
+<body>
+<div style="overflow-x:hidden;">
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="ReclaimOn — App Blocker That Gives You Your Time Back" />
-    <meta
-      property="og:description"
-      content="ReclaimOn anchors your goals to a real time and place, blocks distracting apps, and counts every minute you reclaim. Free for 21 days — no card, no account."
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.reclaimon.com/" />
-    <meta property="og:image" content="https://www.reclaimon.com/screenshots/01-hook.jpg" />
+<!-- ============ NAV ============ -->
+<nav style="position:sticky; top:0; z-index:50; transition:background .3s ease, box-shadow .3s ease; background:transparent;">
+  <div style="max-width:1200px; margin:0 auto; padding:20px 40px; display:flex; align-items:center; justify-content:space-between;">
+    <a href="#top" style="font-family:'Instrument Serif'; font-size:26px; color:#FCFAF4;">Reclaim<span style="color:#1B1712;">On</span></a>
+    <div style="display:flex; align-items:center; gap:32px;">
+      <a href="#how" style="font-size:15px; font-weight:600; color:rgba(252,250,244,.9);">How it works</a>
+      <a href="#features" style="font-size:15px; font-weight:600; color:rgba(252,250,244,.9);">Features</a>
+      <a href="#privacy" style="font-size:15px; font-weight:600; color:rgba(252,250,244,.9);">Privacy</a>
+      <a href="#pricing" style="font-size:15px; font-weight:600; color:rgba(252,250,244,.9);">Pricing</a>
+      <a href="#notify" style="padding:10px 20px; border-radius:999px; background:#FCFAF4; color:#1B1712; font-size:14px; font-weight:700; white-space:nowrap;">Get notified</a>
+    </div>
+  </div>
+</nav>
 
-    <!-- Twitter card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="ReclaimOn — App Blocker That Gives You Your Time Back" />
-    <meta
-      name="twitter:description"
-      content="ReclaimOn anchors your goals to a real time and place, blocks distracting apps, and counts every minute you reclaim. Free for 21 days — no card, no account."
-    />
-    <meta name="twitter:image" content="https://www.reclaimon.com/screenshots/01-hook.jpg" />
+<!-- ============ HERO (1b) ============ -->
+<header id="top" style="margin-top:-84px; padding-top:84px; background:#D9542B; position:relative; overflow:hidden;">
+  <div style="position:absolute; inset:0; background:#1B1712; clip-path:polygon(0 62%, 100% 48%, 100% 100%, 0 100%);"></div>
+  <div style="position:relative; z-index:2; max-width:1200px; margin:0 auto; padding:64px 40px 0; text-align:center;">
+    <p style="margin:0 0 18px; font-size:13px; font-weight:800; letter-spacing:.24em; text-transform:uppercase; color:rgba(27,23,18,.72);">The feed took your attention</p>
+    <h1 style="margin:0 auto; font-family:'Instrument Serif'; font-weight:400; font-size:clamp(56px,9vw,116px); line-height:.92; letter-spacing:-.015em; color:#FCFAF4; max-width:15ch;">Time you can <em>see</em>.</h1>
+    <p style="margin:24px auto 0; font-size:clamp(17px,1.7vw,21px); line-height:1.5; color:rgba(252,250,244,.92); max-width:54ch;">ReclaimOn doesn't just block distractions. It anchors a goal to a real time and place, blocks what pulls you away, and turns the minutes you reclaim into a number that climbs.</p>
+    <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:14px; margin-top:30px;">
+      <a href="#notify" style="display:inline-flex; align-items:center; padding:16px 30px; border-radius:999px; background:#FCFAF4; color:#1B1712; font-size:16px; font-weight:700;">Get notified at launch</a>
+      <a href="#how" style="display:inline-flex; align-items:center; padding:16px 30px; border-radius:999px; border:1.5px solid rgba(252,250,244,.4); color:#FCFAF4; font-size:16px; font-weight:700;">See how it works</a>
+    </div>
+    <p style="margin:20px 0 0; font-size:14px; color:rgba(252,250,244,.72);">Free for 21 days · No card · No account · Data stays on your iPhone</p>
+  </div>
 
-    <!-- Fonts: Instrument Serif (display) + Hanken Grotesk (UI/body) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap"
-      rel="stylesheet"
-    />
+  <div style="position:relative; z-index:3; max-width:1200px; margin:44px auto 0; padding:0 40px; display:flex; justify-content:center;">
+    <div style="position:relative;">
+      <div style="width:300px; padding:9px 9px 0; border-radius:48px 48px 0 0; background:#0d0b09; box-shadow:0 -12px 70px -20px rgba(0,0,0,.55);">
+        <img src="site-assets/home.png" alt="ReclaimOn home screen showing 210 minutes reclaimed today toward a fitness goal" style="display:block; width:100%; border-radius:40px 40px 0 0;">
+      </div>
+      <div style="position:absolute; top:180px; left:-190px; display:flex; align-items:center; gap:10px; padding:13px 19px; border-radius:999px; background:#FCFAF4; box-shadow:0 22px 50px -18px rgba(0,0,0,.4); animation:floaty 5s ease-in-out infinite;">
+        <span style="font-family:'Instrument Serif'; font-size:30px; color:#D9542B; line-height:1;">210</span>
+        <span style="font-size:13px; font-weight:700; color:#1B1712;">min reclaimed<br>today</span>
+      </div>
+      <div style="position:absolute; top:300px; right:-180px; display:flex; align-items:center; gap:10px; padding:13px 19px; border-radius:999px; background:#2A241E; box-shadow:0 22px 50px -18px rgba(0,0,0,.5); animation:floaty 5s ease-in-out infinite; animation-delay:1.3s;">
+        <span style="width:10px; height:10px; border-radius:3px; background:#4E7A5A;"></span>
+        <span style="font-size:13px; font-weight:700; color:#F1EBDF;">Shielding on · 9:30 PM · Home</span>
+      </div>
+    </div>
+  </div>
+</header>
 
-    <!-- Structured data: MobileApplication -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "MobileApplication",
-        "name": "ReclaimOn",
-        "operatingSystem": "iOS 17.0 or later",
-        "applicationCategory": "LifestyleApplication",
-        "author": {
-          "@type": "Organization",
-          "name": "Ohh Wow Labs"
-        },
-        "offers": {
-          "@type": "Offer",
-          "price": "0",
-          "priceCurrency": "USD"
-        },
-        "description": "ReclaimOn anchors your goals to a real time and place, blocks distracting apps, and counts every minute you reclaim. Free for 21 days — no card, no account.",
-        "url": "https://www.reclaimon.com/"
-      }
-    </script>
+<!-- ============ TRUST STRIP ============ -->
+<section style="background:#1B1712; padding:26px 40px;">
+  <div style="max-width:1100px; margin:0 auto; display:flex; flex-wrap:wrap; justify-content:center; gap:14px 44px; font-size:14px; font-weight:600; color:#B8AC9C;">
+    <span>🔒 No account, no servers, no tracking</span>
+    <span>📍 Blocks by place <em>and</em> time</span>
+    <span>📈 Counts the minutes you put in</span>
+    <span>❤️ Apple Health syncs automatically</span>
+  </div>
+</section>
 
-    <!-- Structured data: Organization -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Ohh Wow Labs",
-        "url": "https://www.reclaimon.com/",
-        "email": "tavis.roberts@gmail.com"
-      }
-    </script>
+<!-- ============ PROBLEM ============ -->
+<section style="background:#F1EBDF; padding:120px 40px; text-align:center;">
+  <div style="max-width:820px; margin:0 auto;">
+    <p style="margin:0 0 20px; font-size:13px; font-weight:800; letter-spacing:.24em; text-transform:uppercase; color:#D9542B;">The problem</p>
+    <h2 style="margin:0; font-family:'Instrument Serif'; font-weight:400; font-size:clamp(40px,6vw,68px); line-height:1.02; letter-spacing:-.01em; color:#1B1712;">Every app is built to take a <em style="color:#D9542B;">little more</em> of your day.</h2>
+    <p style="margin:28px auto 0; font-size:20px; line-height:1.6; color:#6d6154; max-width:60ch; text-wrap:pretty;">This is where you switch it back — one thing that matters, starting today. No guilt, no lectures, no shame dashboards. Just the time you meant to spend, spent where you meant to.</p>
+  </div>
+</section>
 
-    <!-- Structured data: FAQPage (matches the visible FAQ section verbatim) -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "What is ReclaimOn?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "ReclaimOn is an iPhone and iPad app that helps you reclaim time from distracting apps. You pick a goal, anchor it to a real time and a real place, and ReclaimOn shields the apps that pull you away for that window — every focused minute counts toward a weekly target."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How is ReclaimOn different from other app blockers?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Most blockers only count the time you resisted. ReclaimOn anchors one goal to a real time and a real place, so shields switch on when you arrive and off when you leave — and it counts the minutes you actually put in. Honest post-session reflections replace streak guilt with coach insights about what is working."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Is ReclaimOn free?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes — the full app is free for 21 days, the time it takes to build a habit, with no card and no account. After that you can stay on the free-forever tier (1 goal, 2 anchors, app shielding, joining Focus Pacts, and a Home Screen widget) or upgrade to ReclaimOn+ for $5.99/month or $29.99/year."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Can ReclaimOn see which apps I block or how I use my phone?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "No. Apple's Screen Time API returns opaque tokens, so ReclaimOn can't see which apps you block or anything about your usage. Everything stays on your device — there is no account, no analytics, and no ads."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What happens after the 21-day free trial?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Nothing is deleted. You keep 1 goal and 2 anchors free forever, with app shielding, the ability to join Focus Pacts, and a small Home Screen widget. If you want unlimited goals and anchors, Focus Pact creation, the Weekly Digest, coach insights, Apple Health sync, Live Activity, and full history and trends, you can upgrade to ReclaimOn+."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Does ReclaimOn work with Apple Health and other apps?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. With ReclaimOn+, Apple Health sync is read-only: workouts and mindful minutes logged in other apps like Strava, Calm, or Headspace count toward matching goals automatically. ReclaimOn never writes to Apple Health."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Can I use ReclaimOn with a friend?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes — Focus Pacts let you make an accountability or do-it-together pact with a friend, with check-ins and an optional shared streak. Creating a pact is a ReclaimOn+ feature, but joining a pact is always free."
-            }
-          }
-        ]
-      }
-    </script>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<!-- ============ HOW IT WORKS ============ -->
+<section id="how" style="background:#FCFAF4; padding:120px 40px;">
+  <div style="max-width:1200px; margin:0 auto;">
+    <div style="max-width:640px;">
+      <p style="margin:0 0 16px; font-size:13px; font-weight:800; letter-spacing:.22em; text-transform:uppercase; color:#D9542B;">How it works</p>
+      <h2 style="margin:0; font-family:'Instrument Serif'; font-weight:400; font-size:clamp(38px,5vw,58px); line-height:1.02; letter-spacing:-.01em; color:#1B1712;">One goal. One place. One <em style="color:#D9542B;">time</em>.</h2>
+    </div>
+    <div style="margin-top:56px; display:grid; grid-template-columns:repeat(3,1fr); gap:24px;">
+      <div style="display:flex; flex-direction:column; background:#F1EBDF; border-radius:24px; padding:36px; box-shadow:0 20px 50px -30px rgba(27,23,18,.35);">
+        <div style="display:flex; align-items:center; justify-content:space-between;">
+          <span style="font-family:'Instrument Serif'; font-size:52px; color:rgba(217,84,43,.35); line-height:1;">01</span>
+          <span style="width:46px; height:46px; border-radius:999px; background:rgba(217,84,43,.12); display:flex; align-items:center; justify-content:center; font-size:22px;">🎯</span>
+        </div>
+        <h3 style="margin:26px 0 0; font-size:22px; font-weight:800; color:#1B1712;">Pick a goal</h3>
+        <p style="margin:12px 0 0; font-size:16px; line-height:1.6; color:#6d6154;">Read more, move more, learn the language — start with the one thing that matters to you.</p>
+      </div>
+      <div style="display:flex; flex-direction:column; background:#F1EBDF; border-radius:24px; padding:36px; box-shadow:0 20px 50px -30px rgba(27,23,18,.35);">
+        <div style="display:flex; align-items:center; justify-content:space-between;">
+          <span style="font-family:'Instrument Serif'; font-size:52px; color:rgba(217,84,43,.35); line-height:1;">02</span>
+          <span style="width:46px; height:46px; border-radius:999px; background:rgba(217,84,43,.12); display:flex; align-items:center; justify-content:center; font-size:22px;">📍</span>
+        </div>
+        <h3 style="margin:26px 0 0; font-size:22px; font-weight:800; color:#1B1712;">Anchor it to real life</h3>
+        <p style="margin:12px 0 0; font-size:16px; line-height:1.6; color:#6d6154;">Tie the goal to a real time and a real place. Arrive, and distracting apps switch off. Leave, and they come back.</p>
+      </div>
+      <div style="display:flex; flex-direction:column; background:#F1EBDF; border-radius:24px; padding:36px; box-shadow:0 20px 50px -30px rgba(27,23,18,.35);">
+        <div style="display:flex; align-items:center; justify-content:space-between;">
+          <span style="font-family:'Instrument Serif'; font-size:52px; color:rgba(217,84,43,.35); line-height:1;">03</span>
+          <span style="width:46px; height:46px; border-radius:999px; background:rgba(217,84,43,.12); display:flex; align-items:center; justify-content:center; font-size:22px;">📈</span>
+        </div>
+        <h3 style="margin:26px 0 0; font-size:22px; font-weight:800; color:#1B1712;">Watch it add up</h3>
+        <p style="margin:12px 0 0; font-size:16px; line-height:1.6; color:#6d6154;">Every shielded minute counts toward your weekly target — and the streaks, trends, and digest show it growing.</p>
+      </div>
+    </div>
+    <p style="margin:52px 0 0; text-align:center; font-family:'Instrument Serif'; font-style:italic; font-size:clamp(24px,3vw,34px); color:rgba(27,23,18,.6);">"You see the time you put in, not the time you resisted."</p>
+  </div>
+</section>
+
+<!-- ============ FEATURES ============ -->
+<section id="features" style="background:#F1EBDF; padding:120px 40px;">
+  <div style="max-width:1200px; margin:0 auto;">
+    <div style="max-width:680px;">
+      <p style="margin:0 0 16px; font-size:13px; font-weight:800; letter-spacing:.22em; text-transform:uppercase; color:#D9542B;">Features</p>
+      <h2 style="margin:0; font-family:'Instrument Serif'; font-weight:400; font-size:clamp(38px,5vw,58px); line-height:1.02; letter-spacing:-.01em; color:#1B1712;">Built to hold the line, <em style="color:#D9542B;">kindly</em>.</h2>
+    </div>
+
+    <div style="margin-top:80px; display:flex; flex-direction:column; gap:110px;">
+
+      <!-- Anchors -->
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:center;">
+        <div>
+          <p style="margin:0 0 14px; font-size:13px; font-weight:800; letter-spacing:.2em; text-transform:uppercase; color:#D9542B;">Habit Anchors</p>
+          <h3 style="margin:0; font-family:'Instrument Serif'; font-weight:400; font-size:clamp(32px,4vw,46px); line-height:1.04; color:#1B1712;">Set it once, <em style="color:#D9542B;">it holds you</em>.</h3>
+          <ul style="list-style:none; margin:26px 0 0; padding:0; display:flex; flex-direction:column; gap:16px;">
+            <li style="display:flex; gap:13px; align-items:flex-start;"><span style="margin-top:3px; width:20px; height:20px; border-radius:999px; background:rgba(78,122,90,.18); color:#4E7A5A; display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:800; flex-shrink:0;">✓</span><span style="font-size:17px; line-height:1.55; color:#4a4038;">Tie one goal to a real time and a real place.</span></li>
+            <li style="display:flex; gap:13px; align-items:flex-start;"><span style="margin-top:3px; width:20px; height:20px; border-radius:999px; background:rgba(78,122,90,.18); color:#4E7A5A; display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:800; flex-shrink:0;">✓</span><span style="font-size:17px; line-height:1.55; color:#4a4038;">Arrive and distractions switch off. Leave and they come back on.</span></li>
+            <li style="display:flex; gap:13px; align-items:flex-start;"><span style="margin-top:3px; width:20px; height:20px; border-radius:999px; background:rgba(78,122,90,.18); color:#4E7A5A; display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:800; flex-shrink:0;">✓</span><span style="font-size:17px; line-height:1.55; color:#4a4038;">Geofenced with your own radius and days — a place as well as a clock.</span></li>
+          </ul>
+        </div>
+        <div style="justify-self:center;">
+          <div style="width:290px; padding:9px; border-radius:46px; background:#0d0b09; box-shadow:0 44px 90px -34px rgba(27,23,18,.55);">
+            <img src="site-assets/anchors.png" alt="ReclaimOn Habit Anchors screen listing anchors tied to a place and time with app shielding" style="display:block; width:100%; border-radius:38px;">
+          </div>
+        </div>
+      </div>
+
+      <!-- Shielding -->
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:center;">
+        <div style="order:2; justify-self:center;">
+          <div style="width:290px; padding:9px; border-radius:46px; background:#0d0b09; box-shadow:0 44px 90px -34px rgba(27,23,18,.55);">
+            <img src="site-assets/intercept.png" alt="ReclaimOn shield screen asking whether anything in the blocked app matters more than the goal" style="display:block; width:100%; border-radius:38px;">
+          </div>
+        </div>
+        <div style="order:1;">
+          <p style="margin:0 0 14px; font-size:13px; font-weight:800; letter-spacing:.2em; text-transform:uppercase; color:#D9542B;">Shielding that speaks up</p>
+          <h3 style="margin:0; font-family:'Instrument Serif'; font-weight:400; font-size:clamp(32px,4vw,46px); line-height:1.04; color:#1B1712;">The scroll <em style="color:#D9542B;">stops here</em>.</h3>
+          <ul style="list-style:none; margin:26px 0 0; padding:0; display:flex; flex-direction:column; gap:16px;">
+            <li style="display:flex; gap:13px; align-items:flex-start;"><span style="margin-top:3px; width:20px; height:20px; border-radius:999px; background:rgba(78,122,90,.18); color:#4E7A5A; display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:800; flex-shrink:0;">✓</span><span style="font-size:17px; line-height:1.55; color:#4a4038;">The moment you drift, ReclaimOn shields the app and asks what matters more.</span></li>
+            <li style="display:flex; gap:13px; align-items:flex-start;"><span style="margin-top:3px; width:20px; height:20px; border-radius:999px; background:rgba(78,122,90,.18); color:#4E7A5A; display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:800; flex-shrink:0;">✓</span><span style="font-size:17px; line-height:1.55; color:#4a4038;">No bypass button — quitting early means naming a reason and typing your goal.</span></li>
+            <li style="display:flex; gap:13px; align-items:flex-start;"><span style="margin-top:3px; width:20px; height:20px; border-radius:999px; background:rgba(78,122,90,.18); color:#4E7A5A; display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:800; flex-shrink:0;">✓</span><span style="font-size:17px; line-height:1.55; color:#4a4038;">The pull to switch usually passes in about a minute.</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Progress -->
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:center;">
+        <div>
+          <p style="margin:0 0 14px; font-size:13px; font-weight:800; letter-spacing:.2em; text-transform:uppercase; color:#D9542B;">Progress &amp; Streaks</p>
+          <h3 style="margin:0; font-family:'Instrument Serif'; font-weight:400; font-size:clamp(32px,4vw,46px); line-height:1.04; color:#1B1712;">Momentum <em style="color:#D9542B;">you can see</em>.</h3>
+          <ul style="list-style:none; margin:26px 0 0; padding:0; display:flex; flex-direction:column; gap:16px;">
+            <li style="display:flex; gap:13px; align-items:flex-start;"><span style="margin-top:3px; width:20px; height:20px; border-radius:999px; background:rgba(78,122,90,.18); color:#4E7A5A; display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:800; flex-shrink:0;">✓</span><span style="font-size:17px; line-height:1.55; color:#4a4038;">Every minute lands against a weekly goal.</span></li>
+            <li style="display:flex; gap:13px; align-items:flex-start;"><span style="margin-top:3px; width:20px; height:20px; border-radius:999px; background:rgba(78,122,90,.18); color:#4E7A5A; display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:800; flex-shrink:0;">✓</span><span style="font-size:17px; line-height:1.55; color:#4a4038;">The number on your home screen is what you put in, not what you resisted.</span></li>
+            <li style="display:flex; gap:13px; align-items:flex-start;"><span style="margin-top:3px; width:20px; height:20px; border-radius:999px; background:rgba(78,122,90,.18); color:#4E7A5A; display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:800; flex-shrink:0;">✓</span><span style="font-size:17px; line-height:1.55; color:#4a4038;">Streaks, best days, and shield-hit trends keep the story honest.</span></li>
+          </ul>
+        </div>
+        <div style="justify-self:center;">
+          <div style="width:290px; padding:9px; border-radius:46px; background:#0d0b09; box-shadow:0 44px 90px -34px rgba(27,23,18,.55);">
+            <img src="site-assets/progress.png" alt="ReclaimOn progress screen with weekly bars, a streak calendar and honest coach insights" style="display:block; width:100%; border-radius:38px;">
+          </div>
+        </div>
+      </div>
+
+      <!-- Session -->
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:center;">
+        <div style="order:2; justify-self:center;">
+          <div style="width:290px; padding:9px; border-radius:46px; background:#0d0b09; box-shadow:0 44px 90px -34px rgba(27,23,18,.55);">
+            <img src="site-assets/session.png" alt="ReclaimOn post-session checkout asking how you feel and how hard it was to stay on task" style="display:block; width:100%; border-radius:38px;">
+          </div>
+        </div>
+        <div style="order:1;">
+          <p style="margin:0 0 14px; font-size:13px; font-weight:800; letter-spacing:.2em; text-transform:uppercase; color:#D9542B;">Honest feedback</p>
+          <h3 style="margin:0; font-family:'Instrument Serif'; font-weight:400; font-size:clamp(32px,4vw,46px); line-height:1.04; color:#1B1712;">Make it count, <em style="color:#D9542B;">every time</em>.</h3>
+          <ul style="list-style:none; margin:26px 0 0; padding:0; display:flex; flex-direction:column; gap:16px;">
+            <li style="display:flex; gap:13px; align-items:flex-start;"><span style="margin-top:3px; width:20px; height:20px; border-radius:999px; background:rgba(78,122,90,.18); color:#4E7A5A; display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:800; flex-shrink:0;">✓</span><span style="font-size:17px; line-height:1.55; color:#4a4038;">Two honest questions after each session — that's the whole checkout.</span></li>
+            <li style="display:flex; gap:13px; align-items:flex-start;"><span style="margin-top:3px; width:20px; height:20px; border-radius:999px; background:rgba(78,122,90,.18); color:#4E7A5A; display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:800; flex-shrink:0;">✓</span><span style="font-size:17px; line-height:1.55; color:#4a4038;">"Drained" and "Nearly quit" are real answers, and they teach the coach.</span></li>
+            <li style="display:flex; gap:13px; align-items:flex-start;"><span style="margin-top:3px; width:20px; height:20px; border-radius:999px; background:rgba(78,122,90,.18); color:#4E7A5A; display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:800; flex-shrink:0;">✓</span><span style="font-size:17px; line-height:1.55; color:#4a4038;">Counted time you didn't earn? Say so and take it back.</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Pacts -->
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:center;">
+        <div>
+          <p style="margin:0 0 14px; font-size:13px; font-weight:800; letter-spacing:.2em; text-transform:uppercase; color:#D9542B;">Focus Pacts</p>
+          <h3 style="margin:0; font-family:'Instrument Serif'; font-weight:400; font-size:clamp(32px,4vw,46px); line-height:1.04; color:#1B1712;">Stay on, <em style="color:#D9542B;">together</em>.</h3>
+          <ul style="list-style:none; margin:26px 0 0; padding:0; display:flex; flex-direction:column; gap:16px;">
+            <li style="display:flex; gap:13px; align-items:flex-start;"><span style="margin-top:3px; width:20px; height:20px; border-radius:999px; background:rgba(78,122,90,.18); color:#4E7A5A; display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:800; flex-shrink:0;">✓</span><span style="font-size:17px; line-height:1.55; color:#4a4038;">Make a pact with a friend and keep each other switched on.</span></li>
+            <li style="display:flex; gap:13px; align-items:flex-start;"><span style="margin-top:3px; width:20px; height:20px; border-radius:999px; background:rgba(78,122,90,.18); color:#4E7A5A; display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:800; flex-shrink:0;">✓</span><span style="font-size:17px; line-height:1.55; color:#4a4038;">Check-ins and shared streaks, synced privately through your own iCloud.</span></li>
+            <li style="display:flex; gap:13px; align-items:flex-start;"><span style="margin-top:3px; width:20px; height:20px; border-radius:999px; background:rgba(78,122,90,.18); color:#4E7A5A; display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:800; flex-shrink:0;">✓</span><span style="font-size:17px; line-height:1.55; color:#4a4038;">Joining a pact is always free — no coach required.</span></li>
+          </ul>
+        </div>
+        <div style="justify-self:center;">
+          <div style="width:290px; padding:9px; border-radius:46px; background:#0d0b09; box-shadow:0 44px 90px -34px rgba(27,23,18,.55);">
+            <img src="site-assets/pacts.png" alt="ReclaimOn Focus Pacts screen showing a shared streak and accountability pact with a friend" style="display:block; width:100%; border-radius:38px;">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRIVACY ============ -->
+<section id="privacy" style="background:#1B1712; padding:120px 40px; position:relative; overflow:hidden;">
+  <div style="position:absolute; top:-160px; right:-120px; width:520px; height:520px; border-radius:999px; background:rgba(217,84,43,.14); filter:blur(40px); pointer-events:none;"></div>
+  <div style="max-width:900px; margin:0 auto; text-align:center; position:relative; z-index:2;">
+    <p style="margin:0 0 18px; font-size:13px; font-weight:800; letter-spacing:.24em; text-transform:uppercase; color:#E9663C;">Privacy by design</p>
+    <h2 style="margin:0; font-family:'Instrument Serif'; font-weight:400; font-size:clamp(38px,5.5vw,62px); line-height:1.02; color:#FCFAF4;">Your data never leaves <em style="color:#E9663C;">your iPhone</em>.</h2>
+    <p style="margin:26px auto 0; font-size:19px; line-height:1.6; color:#B8AC9C; max-width:60ch; text-wrap:pretty;">Apple's Screen Time API returns opaque tokens, so ReclaimOn can't see which apps you block or anything about how you use your phone. There's no account, no server, no analytics, and no ads. Ever.</p>
+    <div style="margin-top:44px; display:grid; grid-template-columns:repeat(3,1fr); gap:20px; text-align:left;">
+      <div style="background:#2A241E; border-radius:20px; padding:28px;"><p style="margin:0; font-size:32px;">🔒</p><h3 style="margin:16px 0 0; font-size:18px; font-weight:800; color:#F1EBDF;">On-device only</h3><p style="margin:8px 0 0; font-size:15px; line-height:1.55; color:#8C8073;">Everything lives on your device and your own private iCloud.</p></div>
+      <div style="background:#2A241E; border-radius:20px; padding:28px;"><p style="margin:0; font-size:32px;">🙈</p><h3 style="margin:16px 0 0; font-size:18px; font-weight:800; color:#F1EBDF;">We can't see your apps</h3><p style="margin:8px 0 0; font-size:15px; line-height:1.55; color:#8C8073;">Opaque tokens mean even we don't know what you blocked.</p></div>
+      <div style="background:#2A241E; border-radius:20px; padding:28px;"><p style="margin:0; font-size:32px;">🚫</p><h3 style="margin:16px 0 0; font-size:18px; font-weight:800; color:#F1EBDF;">No accounts, no ads</h3><p style="margin:8px 0 0; font-size:15px; line-height:1.55; color:#8C8073;">Nothing to sign up for and nothing to sell. Just the app.</p></div>
+    </div>
+    <p style="margin:32px 0 0; font-size:15px;"><a href="privacy.html" style="color:#E9663C; font-weight:700;">Read the full privacy policy →</a></p>
+  </div>
+</section>
+
+<!-- ============ EXTRAS ============ -->
+<section style="background:#FCFAF4; padding:120px 40px;">
+  <div style="max-width:1200px; margin:0 auto;">
+    <div style="max-width:640px;">
+      <p style="margin:0 0 16px; font-size:13px; font-weight:800; letter-spacing:.22em; text-transform:uppercase; color:#D9542B;">Everything else</p>
+      <h2 style="margin:0; font-family:'Instrument Serif'; font-weight:400; font-size:clamp(38px,5vw,58px); line-height:1.02; color:#1B1712;">The quiet <em style="color:#D9542B;">details</em>.</h2>
+    </div>
+    <div style="margin-top:52px; display:grid; grid-template-columns:repeat(3,1fr); gap:20px;">
+      <div style="background:#F1EBDF; border-radius:20px; padding:30px;"><span style="font-size:26px;">❤️</span><h3 style="margin:16px 0 0; font-size:18px; font-weight:800; color:#1B1712;">Apple Health</h3><p style="margin:8px 0 0; font-size:15px; line-height:1.55; color:#6d6154;">Workouts and mindful minutes from other apps count automatically — read-only, always.</p></div>
+      <div style="background:#F1EBDF; border-radius:20px; padding:30px;"><span style="font-size:26px;">⚡</span><h3 style="margin:16px 0 0; font-size:18px; font-weight:800; color:#1B1712;">Live Activity</h3><p style="margin:8px 0 0; font-size:15px; line-height:1.55; color:#6d6154;">A running session on your Lock Screen and in the Dynamic Island.</p></div>
+      <div style="background:#F1EBDF; border-radius:20px; padding:30px;"><span style="font-size:26px;">🔲</span><h3 style="margin:16px 0 0; font-size:18px; font-weight:800; color:#1B1712;">Widgets</h3><p style="margin:8px 0 0; font-size:15px; line-height:1.55; color:#6d6154;">Home Screen and Lock Screen, so the number is always one glance away.</p></div>
+      <div style="background:#F1EBDF; border-radius:20px; padding:30px;"><span style="font-size:26px;">📰</span><h3 style="margin:16px 0 0; font-size:18px; font-weight:800; color:#1B1712;">Weekly Digest</h3><p style="margin:8px 0 0; font-size:15px; line-height:1.55; color:#6d6154;">How the week actually felt, every Sunday at 18:00.</p></div>
+      <div style="background:#F1EBDF; border-radius:20px; padding:30px;"><span style="font-size:26px;">🔔</span><h3 style="margin:16px 0 0; font-size:18px; font-weight:800; color:#1B1712;">Smart nudges</h3><p style="margin:8px 0 0; font-size:15px; line-height:1.55; color:#6d6154;">Arrive somewhere and get a gentle "Want to read?" — never a lecture.</p></div>
+      <div style="background:#F1EBDF; border-radius:20px; padding:30px;"><span style="font-size:26px;">🌱</span><h3 style="margin:16px 0 0; font-size:18px; font-weight:800; color:#1B1712;">Reclaim More</h3><p style="margin:8px 0 0; font-size:15px; line-height:1.55; color:#6d6154;">Found time going spare? Start an unscheduled session on any goal, any length.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRICING ============ -->
+<section id="pricing" style="background:#F1EBDF; padding:120px 40px;">
+  <div style="max-width:1080px; margin:0 auto;">
+    <div style="margin:0 auto; max-width:760px; background:#D9542B; border-radius:18px; padding:18px 26px; text-align:center;">
+      <p style="margin:0; font-size:15px; font-weight:700; color:#FCFAF4;">Free for 21 days — the time it takes to build a habit. No card, no account.</p>
+    </div>
+    <div style="text-align:center; margin-top:52px;">
+      <p style="margin:0 0 16px; font-size:13px; font-weight:800; letter-spacing:.22em; text-transform:uppercase; color:#D9542B;">Pricing</p>
+      <h2 style="margin:0; font-family:'Instrument Serif'; font-weight:400; font-size:clamp(38px,5vw,58px); line-height:1.02; color:#1B1712;">Start free. Stay if it <em style="color:#D9542B;">works</em>.</h2>
+    </div>
+    <div style="margin-top:52px; display:grid; grid-template-columns:1fr 1fr; gap:24px; align-items:stretch;">
+      <div style="display:flex; flex-direction:column; background:#FCFAF4; border:1px solid rgba(27,23,18,.1); border-radius:26px; padding:40px;">
+        <h3 style="margin:0; font-size:20px; font-weight:800; color:#1B1712;">Free forever</h3>
+        <p style="margin:6px 0 0; font-size:14px; color:#8C8073;">After your 21 days</p>
+        <p style="margin:24px 0 0; font-family:'Instrument Serif'; font-size:64px; line-height:1; color:#1B1712;">$0</p>
+        <ul style="list-style:none; margin:28px 0 0; padding:0; display:flex; flex-direction:column; gap:13px;">
+          <li style="display:flex; gap:11px; align-items:center; font-size:16px; color:#4a4038;"><span style="color:#4E7A5A; font-weight:800;">✓</span>1 goal</li>
+          <li style="display:flex; gap:11px; align-items:center; font-size:16px; color:#4a4038;"><span style="color:#4E7A5A; font-weight:800;">✓</span>2 anchors</li>
+          <li style="display:flex; gap:11px; align-items:center; font-size:16px; color:#4a4038;"><span style="color:#4E7A5A; font-weight:800;">✓</span>App shielding</li>
+          <li style="display:flex; gap:11px; align-items:center; font-size:16px; color:#4a4038;"><span style="color:#4E7A5A; font-weight:800;">✓</span>Join Focus Pacts</li>
+          <li style="display:flex; gap:11px; align-items:center; font-size:16px; color:#4a4038;"><span style="color:#4E7A5A; font-weight:800;">✓</span>Home Screen widget</li>
+        </ul>
+        <div style="margin-top:auto; padding-top:36px;">
+          <a href="#notify" style="display:block; text-align:center; padding:15px; border-radius:999px; border:1.5px solid rgba(27,23,18,.22); color:#1B1712; font-size:16px; font-weight:700;">Get notified — free</a>
+        </div>
+      </div>
+      <div style="position:relative; display:flex; flex-direction:column; background:#1B1712; border:2px solid #D9542B; border-radius:26px; padding:40px;">
+        <span style="position:absolute; top:-14px; left:40px; padding:6px 16px; border-radius:999px; background:#D9542B; color:#FCFAF4; font-size:12px; font-weight:800; letter-spacing:.06em; text-transform:uppercase;">Most popular</span>
+        <h3 style="margin:0; font-size:20px; font-weight:800; color:#F1EBDF;">ReclaimOn<span style="color:#E9663C;">+</span></h3>
+        <p style="margin:6px 0 0; font-size:14px; color:#8C8073;">Everything, unlimited</p>
+        <p style="margin:24px 0 0; display:flex; align-items:baseline; gap:10px;"><span style="font-family:'Instrument Serif'; font-size:64px; line-height:1; color:#FCFAF4;">$29.99</span><span style="font-size:15px; color:#8C8073;">/year · ~$2.50/mo</span></p>
+        <p style="margin:6px 0 0; font-size:14px; color:#8C8073;">or $5.99/month</p>
+        <ul style="list-style:none; margin:24px 0 0; padding:0; display:grid; grid-template-columns:1fr 1fr; gap:12px 16px;">
+          <li style="display:flex; gap:10px; align-items:center; font-size:15px; color:#F1EBDF;"><span style="color:#E9663C; font-weight:800;">✓</span>Unlimited goals</li>
+          <li style="display:flex; gap:10px; align-items:center; font-size:15px; color:#F1EBDF;"><span style="color:#E9663C; font-weight:800;">✓</span>Unlimited anchors</li>
+          <li style="display:flex; gap:10px; align-items:center; font-size:15px; color:#F1EBDF;"><span style="color:#E9663C; font-weight:800;">✓</span>Create Focus Pacts</li>
+          <li style="display:flex; gap:10px; align-items:center; font-size:15px; color:#F1EBDF;"><span style="color:#E9663C; font-weight:800;">✓</span>Weekly Digest</li>
+          <li style="display:flex; gap:10px; align-items:center; font-size:15px; color:#F1EBDF;"><span style="color:#E9663C; font-weight:800;">✓</span>Coach insights</li>
+          <li style="display:flex; gap:10px; align-items:center; font-size:15px; color:#F1EBDF;"><span style="color:#E9663C; font-weight:800;">✓</span>Apple Health sync</li>
+          <li style="display:flex; gap:10px; align-items:center; font-size:15px; color:#F1EBDF;"><span style="color:#E9663C; font-weight:800;">✓</span>Live Activity</li>
+          <li style="display:flex; gap:10px; align-items:center; font-size:15px; color:#F1EBDF;"><span style="color:#E9663C; font-weight:800;">✓</span>Full history</li>
+        </ul>
+        <div style="margin-top:auto; padding-top:32px;">
+          <a href="#notify" style="display:block; text-align:center; padding:15px; border-radius:999px; background:#D9542B; color:#FCFAF4; font-size:16px; font-weight:700;">Start your 21 days free</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SEO CONTENT LINKS ============ -->
+<section style="background:#FCFAF4; padding:100px 40px 40px;">
+  <div style="max-width:1200px; margin:0 auto;">
+    <div style="max-width:640px;">
+      <p style="margin:0 0 16px; font-size:13px; font-weight:800; letter-spacing:.22em; text-transform:uppercase; color:#D9542B;">Learn more</p>
+      <h2 style="margin:0; font-family:'Instrument Serif'; font-weight:400; font-size:clamp(34px,4.5vw,52px); line-height:1.02; color:#1B1712;">Guides for getting your time back.</h2>
+    </div>
+    <div style="margin-top:44px; display:grid; grid-template-columns:repeat(3,1fr); gap:20px;">
+      <a href="best-app-blocker-iphone.html" style="display:block; background:#F1EBDF; border-radius:22px; padding:32px; color:inherit;">
+        <p style="margin:0; font-size:12px; font-weight:800; letter-spacing:.16em; text-transform:uppercase; color:#8C8073;">Guide</p>
+        <h3 style="margin:12px 0 0; font-family:'Instrument Serif'; font-size:26px; line-height:1.1; color:#1B1712;">The best app blocker for iPhone in 2026</h3>
+        <p style="margin:12px 0 0; font-size:15px; line-height:1.55; color:#6d6154;">What actually works, what to look for, and why blocking alone isn't enough.</p>
+        <p style="margin:16px 0 0; font-size:15px; font-weight:700; color:#D9542B;">Read the guide →</p>
+      </a>
+      <a href="reclaimon-vs-opal-freedom.html" style="display:block; background:#F1EBDF; border-radius:22px; padding:32px; color:inherit;">
+        <p style="margin:0; font-size:12px; font-weight:800; letter-spacing:.16em; text-transform:uppercase; color:#8C8073;">Comparison</p>
+        <h3 style="margin:12px 0 0; font-family:'Instrument Serif'; font-size:26px; line-height:1.1; color:#1B1712;">ReclaimOn vs Opal, Freedom &amp; one sec</h3>
+        <p style="margin:12px 0 0; font-size:15px; line-height:1.55; color:#6d6154;">An honest, side-by-side look at how the popular blockers really differ.</p>
+        <p style="margin:16px 0 0; font-size:15px; font-weight:700; color:#D9542B;">Compare →</p>
+      </a>
+      <a href="app-blocker-for-adhd.html" style="display:block; background:#F1EBDF; border-radius:22px; padding:32px; color:inherit;">
+        <p style="margin:0; font-size:12px; font-weight:800; letter-spacing:.16em; text-transform:uppercase; color:#8C8073;">Use case</p>
+        <h3 style="margin:12px 0 0; font-family:'Instrument Serif'; font-size:26px; line-height:1.1; color:#1B1712;">An app blocker built for ADHD &amp; deep work</h3>
+        <p style="margin:12px 0 0; font-size:15px; line-height:1.55; color:#6d6154;">Why place-and-time anchors beat willpower for focus and studying.</p>
+        <p style="margin:16px 0 0; font-size:15px; font-weight:700; color:#D9542B;">Read more →</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section style="background:#FCFAF4; padding:80px 40px 120px;">
+  <div style="max-width:820px; margin:0 auto;">
+    <div style="text-align:center;">
+      <p style="margin:0 0 16px; font-size:13px; font-weight:800; letter-spacing:.22em; text-transform:uppercase; color:#D9542B;">FAQ</p>
+      <h2 style="margin:0; font-family:'Instrument Serif'; font-weight:400; font-size:clamp(36px,5vw,56px); line-height:1.02; color:#1B1712;">Honest <em style="color:#D9542B;">answers</em>.</h2>
+    </div>
+    <div style="margin-top:44px; display:flex; flex-direction:column;">
+      <details style="border-bottom:1px solid rgba(27,23,18,.12);">
+        <summary style="display:flex; justify-content:space-between; gap:20px; padding:22px 0; font-size:19px; font-weight:700; color:#1B1712;">What is ReclaimOn?<span style="color:#D9542B;">+</span></summary>
+        <p style="margin:0 0 22px; font-size:16px; line-height:1.6; color:#6d6154;">ReclaimOn is an iPhone and iPad screen time app that helps you reclaim time from distracting apps. You pick a goal, anchor it to a real time and a real place, and ReclaimOn shields the apps that pull you away for that window — every focused minute counts toward a weekly target.</p>
+      </details>
+      <details style="border-bottom:1px solid rgba(27,23,18,.12);">
+        <summary style="display:flex; justify-content:space-between; gap:20px; padding:22px 0; font-size:19px; font-weight:700; color:#1B1712;">How is ReclaimOn different from other app blockers?<span style="color:#D9542B;">+</span></summary>
+        <p style="margin:0 0 22px; font-size:16px; line-height:1.6; color:#6d6154;">Most blockers only count the time you resisted. ReclaimOn anchors one goal to a real time and place, so shields switch on when you arrive and off when you leave — and it counts the minutes you actually put in. Honest post-session reflections replace streak guilt with coach insights about what's working.</p>
+      </details>
+      <details style="border-bottom:1px solid rgba(27,23,18,.12);">
+        <summary style="display:flex; justify-content:space-between; gap:20px; padding:22px 0; font-size:19px; font-weight:700; color:#1B1712;">Is ReclaimOn free?<span style="color:#D9542B;">+</span></summary>
+        <p style="margin:0 0 22px; font-size:16px; line-height:1.6; color:#6d6154;">Yes — the full app is free for 21 days, the time it takes to build a habit, with no card and no account. After that you can stay on the free-forever tier (1 goal, 2 anchors, app shielding, joining Focus Pacts, and a Home Screen widget) or upgrade to ReclaimOn+ for $5.99/month or $29.99/year.</p>
+      </details>
+      <details style="border-bottom:1px solid rgba(27,23,18,.12);">
+        <summary style="display:flex; justify-content:space-between; gap:20px; padding:22px 0; font-size:19px; font-weight:700; color:#1B1712;">Can ReclaimOn see which apps I block?<span style="color:#D9542B;">+</span></summary>
+        <p style="margin:0 0 22px; font-size:16px; line-height:1.6; color:#6d6154;">No. Apple's Screen Time API returns opaque tokens, so ReclaimOn can't see which apps you block or anything about your usage. Everything stays on your device — there's no account, no analytics, and no ads.</p>
+      </details>
+      <details style="border-bottom:1px solid rgba(27,23,18,.12);">
+        <summary style="display:flex; justify-content:space-between; gap:20px; padding:22px 0; font-size:19px; font-weight:700; color:#1B1712;">Does it work with Apple Health?<span style="color:#D9542B;">+</span></summary>
+        <p style="margin:0 0 22px; font-size:16px; line-height:1.6; color:#6d6154;">Yes. With ReclaimOn+, Apple Health sync is read-only: workouts and mindful minutes logged in other apps like Strava, Calm, or Headspace count toward matching goals automatically. ReclaimOn never writes to Apple Health.</p>
+      </details>
+      <details style="border-bottom:1px solid rgba(27,23,18,.12);">
+        <summary style="display:flex; justify-content:space-between; gap:20px; padding:22px 0; font-size:19px; font-weight:700; color:#1B1712;">When does ReclaimOn launch?<span style="color:#D9542B;">+</span></summary>
+        <p style="margin:0 0 22px; font-size:16px; line-height:1.6; color:#6d6154;">ReclaimOn is awaiting approval on the App Store. Add your email below and we'll send one message the day it's live — no other email, ever.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NOTIFY / FINAL CTA ============ -->
+<section id="notify" style="background:#D9542B; padding:120px 40px; text-align:center;">
+  <div style="max-width:680px; margin:0 auto;">
+    <p style="margin:0 0 16px; font-size:13px; font-weight:800; letter-spacing:.24em; text-transform:uppercase; color:rgba(27,23,18,.7);">Launching soon on the App Store</p>
+    <h2 style="margin:0; font-family:'Instrument Serif'; font-weight:400; font-size:clamp(44px,6.5vw,72px); line-height:.98; color:#FCFAF4;">Turn it back <em>on</em>.</h2>
+    <p style="margin:22px auto 0; font-size:19px; line-height:1.55; color:rgba(252,250,244,.9); max-width:46ch;">A calmer relationship with your phone starts with one goal, one place, one time. Be first to know when it's live.</p>
+    <form style="margin:34px auto 0; display:flex; gap:10px; max-width:460px; flex-wrap:wrap; justify-content:center;">
+      <input type="email" required placeholder="you@email.com" aria-label="Email address" style="flex:1; min-width:220px; padding:16px 22px; border-radius:999px; border:none; font-size:16px; font-family:inherit; background:#FCFAF4; color:#1B1712;">
+      <button type="submit" style="padding:16px 30px; border-radius:999px; border:none; background:#1B1712; color:#FCFAF4; font-size:16px; font-weight:700; font-family:inherit; cursor:pointer;">Notify me</button>
+    </form>
+    <p style="margin:16px 0 0; font-size:14px; color:rgba(252,250,244,.85); min-height:20px;">Free for 21 days · No card · No account</p>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer style="background:#1B1712; padding:64px 40px 40px;">
+  <div style="max-width:1200px; margin:0 auto; display:grid; grid-template-columns:2fr 1fr 1fr; gap:40px;">
+    <div>
+      <a href="#top" style="font-family:'Instrument Serif'; font-size:26px; color:#FCFAF4;">Reclaim<span style="color:#E9663C;">On</span></a>
+      <p style="margin:14px 0 0; font-size:15px; line-height:1.6; color:#8C8073; max-width:34ch;">A screen time app that anchors your goals to real life and counts every minute you win back.</p>
+    </div>
+    <div>
+      <p style="margin:0; font-size:13px; font-weight:800; letter-spacing:.14em; text-transform:uppercase; color:#8C8073;">Product</p>
+      <div style="margin-top:16px; display:flex; flex-direction:column; gap:11px;">
+        <a href="#how" style="font-size:15px; color:#F1EBDF;">How it works</a>
+        <a href="#features" style="font-size:15px; color:#F1EBDF;">Features</a>
+        <a href="#pricing" style="font-size:15px; color:#F1EBDF;">Pricing</a>
+        <a href="#privacy" style="font-size:15px; color:#F1EBDF;">Privacy</a>
+      </div>
+    </div>
+    <div>
+      <p style="margin:0; font-size:13px; font-weight:800; letter-spacing:.14em; text-transform:uppercase; color:#8C8073;">Guides</p>
+      <div style="margin-top:16px; display:flex; flex-direction:column; gap:11px;">
+        <a href="best-app-blocker-iphone.html" style="font-size:15px; color:#F1EBDF;">Best app blocker</a>
+        <a href="reclaimon-vs-opal-freedom.html" style="font-size:15px; color:#F1EBDF;">ReclaimOn vs alternatives</a>
+        <a href="app-blocker-for-adhd.html" style="font-size:15px; color:#F1EBDF;">App blocker for ADHD</a>
+        <a href="privacy.html" style="font-size:15px; color:#F1EBDF;">Privacy policy</a>
+      </div>
+    </div>
+  </div>
+  <div style="max-width:1200px; margin:44px auto 0; padding-top:24px; border-top:1px solid rgba(255,255,255,.1); display:flex; flex-wrap:wrap; justify-content:space-between; gap:12px;">
+    <p style="margin:0; font-size:14px; color:#8C8073;">© 2026 ReclaimOn. Made by Ohh Wow Labs.</p>
+    <p style="margin:0; font-size:14px; color:#8C8073;">Awaiting App Store approval · <a href="mailto:tavis.roberts@gmail.com" style="color:#B8AC9C;">tavis.roberts@gmail.com</a></p>
+  </div>
+</footer>
+
+</div>
+<script>(function(){var nav=document.querySelector("nav");function o(){if(!nav)return;var s=window.scrollY>40;nav.style.background=s?"rgba(27,23,18,.92)":"transparent";nav.style.backdropFilter=s?"blur(12px)":"none";nav.style.webkitBackdropFilter=s?"blur(12px)":"none";nav.style.boxShadow=s?"0 1px 0 rgba(255,255,255,.08)":"none";}window.addEventListener("scroll",o,{passive:true});o();var f=document.querySelector("#notify form");if(f){f.addEventListener("submit",function(e){e.preventDefault();var m=f.nextElementSibling;if(m){m.textContent="You\u2019re on the list \u2014 we\u2019ll email you the day ReclaimOn goes live.";m.style.color="#FCFAF4";m.style.fontWeight="700";}f.reset();});}})();</script>
+</body>
 </html>
