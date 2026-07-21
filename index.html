@@ -170,7 +170,7 @@
       <div style="display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:center;">
         <div style="order:2; justify-self:center;">
           <div style="width:290px; padding:9px; border-radius:46px; background:#0d0b09; box-shadow:0 44px 90px -34px rgba(27,23,18,.55);">
-            <img src="site-assets/intercept.png" alt="ReclaimOn shield screen asking whether anything in the blocked app matters more than the goal" style="display:block; width:100%; border-radius:38px;">
+            <img src="site-assets/intercept.jpg" alt="ReclaimOn shield screen asking whether anything in the blocked app matters more than the goal" style="display:block; width:100%; border-radius:38px;">
           </div>
         </div>
         <div style="order:1;">
@@ -197,7 +197,7 @@
         </div>
         <div style="justify-self:center;">
           <div style="width:290px; padding:9px; border-radius:46px; background:#0d0b09; box-shadow:0 44px 90px -34px rgba(27,23,18,.55);">
-            <img src="site-assets/progress.png" alt="ReclaimOn progress screen with weekly bars, a streak calendar and honest coach insights" style="display:block; width:100%; border-radius:38px;">
+            <img src="site-assets/progress.jpg" alt="ReclaimOn progress screen with weekly bars, a streak calendar and honest coach insights" style="display:block; width:100%; border-radius:38px;">
           </div>
         </div>
       </div>
@@ -398,11 +398,11 @@
     <p style="margin:0 0 16px; font-size:13px; font-weight:800; letter-spacing:.24em; text-transform:uppercase; color:rgba(27,23,18,.7);">Launching soon on the App Store</p>
     <h2 style="margin:0; font-family:'Instrument Serif'; font-weight:400; font-size:clamp(44px,6.5vw,72px); line-height:.98; color:#FCFAF4;">Turn it back <em>on</em>.</h2>
     <p style="margin:22px auto 0; font-size:19px; line-height:1.55; color:rgba(252,250,244,.9); max-width:46ch;">A calmer relationship with your phone starts with one goal, one place, one time. Be first to know when it's live.</p>
-    <form style="margin:34px auto 0; display:flex; gap:10px; max-width:460px; flex-wrap:wrap; justify-content:center;">
-      <input type="email" required placeholder="you@email.com" aria-label="Email address" style="flex:1; min-width:220px; padding:16px 22px; border-radius:999px; border:none; font-size:16px; font-family:inherit; background:#FCFAF4; color:#1B1712;">
-      <button type="submit" style="padding:16px 30px; border-radius:999px; border:none; background:#1B1712; color:#FCFAF4; font-size:16px; font-weight:700; font-family:inherit; cursor:pointer;">Notify me</button>
+    <form id="notify-form" style="margin:34px auto 0; display:flex; gap:10px; max-width:460px; flex-wrap:wrap; justify-content:center;">
+      <input id="notify-email" type="email" required placeholder="you@email.com" aria-label="Email address" style="flex:1; min-width:220px; padding:16px 22px; border-radius:999px; border:none; font-size:16px; font-family:inherit; background:#FCFAF4; color:#1B1712;">
+      <button id="notify-btn" type="submit" style="padding:16px 30px; border-radius:999px; border:none; background:#1B1712; color:#FCFAF4; font-size:16px; font-weight:700; font-family:inherit; cursor:pointer;">Notify me</button>
     </form>
-    <p style="margin:16px 0 0; font-size:14px; color:rgba(252,250,244,.85); min-height:20px;">Free for 21 days · No card · No account</p>
+    <p id="notify-status" role="status" style="margin:16px 0 0; font-size:14px; color:rgba(252,250,244,.85); min-height:20px;">Free for 21 days · No card · No account</p>
   </div>
 </section>
 
@@ -439,6 +439,6 @@
 </footer>
 
 </div>
-<script>(function(){var nav=document.querySelector("nav");function o(){if(!nav)return;var s=window.scrollY>40;nav.style.background=s?"rgba(27,23,18,.92)":"transparent";nav.style.backdropFilter=s?"blur(12px)":"none";nav.style.webkitBackdropFilter=s?"blur(12px)":"none";nav.style.boxShadow=s?"0 1px 0 rgba(255,255,255,.08)":"none";}window.addEventListener("scroll",o,{passive:true});o();var f=document.querySelector("#notify form");if(f){f.addEventListener("submit",function(e){e.preventDefault();var m=f.nextElementSibling;if(m){m.textContent="You\u2019re on the list \u2014 we\u2019ll email you the day ReclaimOn goes live.";m.style.color="#FCFAF4";m.style.fontWeight="700";}f.reset();});}})();</script>
+<script>(function(){var nav=document.querySelector("nav");function o(){if(!nav)return;var s=window.scrollY>40;nav.style.background=s?"rgba(27,23,18,.92)":"transparent";nav.style.backdropFilter=s?"blur(12px)":"none";nav.style.webkitBackdropFilter=s?"blur(12px)":"none";nav.style.boxShadow=s?"0 1px 0 rgba(255,255,255,.08)":"none";}window.addEventListener("scroll",o,{passive:true});o();var f=document.getElementById("notify-form");if(!f)return;var status=document.getElementById("notify-status");var btn=document.getElementById("notify-btn");var input=document.getElementById("notify-email");var defaultText=status.textContent;f.addEventListener("submit",function(e){e.preventDefault();var email=input.value.trim();if(!email)return;btn.disabled=true;btn.textContent="Sending\u2026";fetch("https://reclaimon-notify.ohhwowlabs.workers.dev",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:email,source:"website"})}).then(function(r){return r.json().catch(function(){return{ok:r.ok};});}).then(function(d){if(d&&d.ok){status.textContent="You\u2019re on the list \u2014 we\u2019ll email you the day ReclaimOn goes live.";status.style.color="#FCFAF4";status.style.fontWeight="700";f.reset();}else{status.textContent=d&&d.error==="invalid_email"?"That email doesn\u2019t look right \u2014 mind checking it?":"Something went wrong \u2014 please try again.";}}).catch(function(){status.textContent="Couldn\u2019t reach the server \u2014 please try again in a moment.";}).finally(function(){btn.disabled=false;btn.textContent="Notify me";});});})();</script>
 </body>
 </html>
