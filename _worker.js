@@ -23,10 +23,6 @@ export default {
       }
     }
 
-    const res = await env.ASSETS.fetch(request);
-    if (res.status === 404 && request.method === "GET") {
-      return env.ASSETS.fetch(new URL("/index.html", request.url));
-    }
-    return res;
+    return env.ASSETS.fetch(request);
   }
 };
